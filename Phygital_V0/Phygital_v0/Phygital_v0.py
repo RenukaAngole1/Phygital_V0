@@ -423,8 +423,13 @@ def ultraSonicRead():
 def close():
     global ser
     global timer
+    global setPacketState
+    
+    setPacketState="Not"
     timer.cancel()
+    
     ser.close()
+    
 
  # print(aRead(2))
 
