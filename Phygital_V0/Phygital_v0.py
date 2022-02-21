@@ -136,7 +136,7 @@ def Show():
     
     # print(setPacketState)
     if setPacketState=="Not":
-    
+        print("i")
         str1 = ''.join(setPacket)
         ser.write((str1).encode())
 #        print(str1)
@@ -199,56 +199,107 @@ def SendSMS(Number,Message,Auth_Key="r"):
 def setPWM(PinNum,Value):
      Temp1 = list(str(Value))
      if(Value >=100):
-        if(PinNum==3):
-            SendData[17]=Temp1[0]
-            SendData[18]=Temp1[1]
-            SendData[19]=Temp1[2]
+       
 
-        if(PinNum==5):
+        if(PinNum==3):
             SendData[20]=Temp1[0]
             SendData[21]=Temp1[1]
             SendData[22]=Temp1[2]
             
-        if(PinNum==6):
+        if(PinNum==5):
             SendData[23]=Temp1[0]
             SendData[24]=Temp1[1]
             SendData[25]=Temp1[2]
+            
+        if(PinNum==6):
+            SendData[26]=Temp1[0]
+            SendData[27]=Temp1[1]
+            SendData[28]=Temp1[2]
+            
+        if(PinNum==9):
+            SendData[29]=Temp1[0]
+            SendData[30]=Temp1[1]
+            SendData[31]=Temp1[2]
+
+        if(PinNum==10):
+            SendData[32]=Temp1[0]
+            SendData[33]=Temp1[1]
+            SendData[34]=Temp1[2]
+            
+        if(PinNum==11):
+            SendData[35]=Temp1[0]
+            SendData[36]=Temp1[1]
+            SendData[37]=Temp1[2]
+
 
        
 
      if(Value <100) and (Value >=10) :
-        if(PinNum==3):
-            SendData[17]='0'
-            SendData[18]=Temp1[0]
-            SendData[19]=Temp1[1]
+        
 
-        if(PinNum==5):
+        if(PinNum==3):
             SendData[20]='0'
             SendData[21]=Temp1[0]
             SendData[22]=Temp1[1]
             
-        if(PinNum==6):
+        if(PinNum==5):
             SendData[23]='0'
             SendData[24]=Temp1[0]
             SendData[25]=Temp1[1]
+            
+        if(PinNum==6):
+            SendData[26]='0'
+            SendData[27]=Temp1[0]
+            SendData[28]=Temp1[1]
+            
+        if(PinNum==9):
+            SendData[29]='0'
+            SendData[30]=Temp1[0]
+            SendData[31]=Temp1[1]
 
+        if(PinNum==10):
+            SendData[32]='0'
+            SendData[33]=Temp1[0]
+            SendData[34]=Temp1[1]
+            
+        if(PinNum==11):
+            SendData[35]='0'
+            SendData[36]=Temp1[0]
+            SendData[37]=Temp1[1]
         
 
      if(Value <10)  :
+        
         if(PinNum==3):
-            SendData[17]='0'
-            SendData[18]='0'
-            SendData[19]=Temp1[0]
-
-        if(PinNum==5):
             SendData[20]='0'
             SendData[21]='0'
             SendData[22]=Temp1[0]
             
-        if(PinNum==6):
+        if(PinNum==5):
             SendData[23]='0'
             SendData[24]='0'
             SendData[25]=Temp1[0]
+            
+        if(PinNum==6):
+            SendData[26]='0'
+            SendData[27]='0'
+            SendData[28]=Temp1[0]
+            
+        if(PinNum==9):
+            SendData[29]='0'
+            SendData[30]='0'
+            SendData[31]=Temp1[0]
+
+        if(PinNum==10):
+            SendData[32]='0'
+            SendData[33]='0'
+            SendData[34]=Temp1[0]
+            
+        if(PinNum==11):
+            SendData[35]='0'
+            SendData[36]='0'
+            SendData[37]=Temp1[0]
+
 
         
     
@@ -262,52 +313,67 @@ def ConvertAngle(ServoNum,Angle,ServoState):
     
     if ServoState=="static":
         if(Angle >=100):
-            if(ServoNum==9):
+            if(ServoNum==7):
                 SendData[8]=Temp1[0]
                 SendData[9]=Temp1[1]
                 SendData[10]=Temp1[2]
     
-            if(ServoNum==10):
+            if(ServoNum==8):
                 SendData[11]=Temp1[0]
                 SendData[12]=Temp1[1]
                 SendData[13]=Temp1[2]
     
-            if(ServoNum==11):
+            if(ServoNum==12):
                 SendData[14]=Temp1[0]
                 SendData[15]=Temp1[1]
                 SendData[16]=Temp1[2]
+                
+            if(ServoNum==13):
+                SendData[17]=Temp1[0]
+                SendData[18]=Temp1[1]
+                SendData[19]=Temp1[2]    
     
         if(Angle <100) and (Angle >=10) :
-            if(ServoNum==9):
+            if(ServoNum==7):
                 SendData[8]='0'
                 SendData[9]=Temp1[0]
                 SendData[10]=Temp1[1]
     
-            if(ServoNum==10):
+            if(ServoNum==8):
                 SendData[11]='0'
                 SendData[12]=Temp1[0]
                 SendData[13]=Temp1[1]
     
-            if(ServoNum==11):
+            if(ServoNum==12):
                 SendData[14]='0'
                 SendData[15]=Temp1[0]
                 SendData[16]=Temp1[1]
+                
+            if(ServoNum==13):
+                SendData[17]='0'
+                SendData[18]=Temp1[0]
+                SendData[19]=Temp1[1]   
     
         if(Angle <10)  :
-            if(ServoNum==9):
+            if(ServoNum==7):
                 SendData[8]='0'
                 SendData[9]='0'
                 SendData[10]=Temp1[0]
     
-            if(ServoNum==10):
+            if(ServoNum==8):
                 SendData[11]='0'
                 SendData[12]='0'
                 SendData[13]=Temp1[0]
     
-            if(ServoNum==11):
+            if(ServoNum==12):
                 SendData[14]='0'
                 SendData[15]='0'
                 SendData[16]=Temp1[0]
+                
+            if(ServoNum==13):
+                SendData[17]='0'
+                SendData[18]='0'
+                SendData[19]=Temp1[0]   
                 
     
 
@@ -389,7 +455,12 @@ def aRead(PinNum):
     if(PinNum=='A5'):
         A6Val=int(AData[29:33])
         return A6Val
-   
+    if(PinNum=='A6'):
+        A7Val=int(AData[33:37])
+        return A7Val
+    if(PinNum=='A7'):
+        A8Val=int(AData[37:41])
+        return A8Val
 
 
 
@@ -423,8 +494,13 @@ def ultraSonicRead():
 def close():
     global ser
     global timer
+    global setPacketState
+    
+    setPacketState="Not"
     timer.cancel()
+    
     ser.close()
+    
 
  # print(aRead(2))
 
